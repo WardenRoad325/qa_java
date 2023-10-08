@@ -1,5 +1,6 @@
-package com.example;
 
+import com.example.Cat;
+import com.example.Predator;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

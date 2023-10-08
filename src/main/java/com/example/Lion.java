@@ -1,5 +1,4 @@
 package com.example;
-import static org.mockito.Mockito.*;
 
 import java.util.List;
 
@@ -30,7 +29,6 @@ public class Lion {
     public List<String> getFood() throws Exception {
         return feline.getFood("Хищник");
     }
-
 }
 
 
