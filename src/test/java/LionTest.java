@@ -5,12 +5,12 @@ import com.example.Feline;
 import com.example.Lion;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.List;
 
  public class LionTest {
 
-    private Lion lion;
+
+     private Lion lion;
     private Feline felineMock;
 
     @Before
@@ -56,15 +56,16 @@ import java.util.List;
         assertEquals(expectedFood, food);
     }
 
-    @Test(expected = Exception.class)
-    public void testInvalidSex() throws Exception {
-        // Мокируем метод getKittens() в объекте felineMock
-        doThrow(new Exception("Используйте допустимые значения пола животного - самец или самка"))
-                .when(felineMock).getKittens();
+     @Test(expected = Exception.class)
+     public void testInvalidSex() throws Exception {
+         // Мокируем метод getKittens() в объекте felineMock
+         doThrow(new Exception("Используйте допустимые значения пола животного - самец или самка"))
+                 .when(felineMock).getKittens();
 
-        Lion lionWithInvalidSex = new Lion("Некорректный пол", felineMock);
-    }
-}
+         Lion lionWithInvalidSex = new Lion("Некорректный пол", felineMock);
+     }
+ }
+
 
 
 

@@ -1,11 +1,11 @@
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
-import java.util.List;
-
 import com.example.Feline;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class FelineTest {
 
@@ -18,11 +18,11 @@ public class FelineTest {
 
     @Test
     public void testEatMeat() throws Exception {
-        List<String> food = feline.eatMeat();
-        assertNotNull(food);
-        assertTrue(food.contains("Животные"));
-        assertTrue(food.contains("Птицы"));
-        assertTrue(food.contains("Рыба"));
+        List<String> expectedFood = Arrays.asList("Животные", "Птицы", "Рыба");
+        List<String> actualFood = feline.eatMeat();
+        assertNotNull(actualFood);
+        assertTrue(actualFood.containsAll(expectedFood));
+        assertTrue(expectedFood.containsAll(actualFood));
     }
 
     @Test
