@@ -20,10 +20,9 @@ public class FelineTest {
     public void testEatMeat() throws Exception {
         List<String> expectedFood = Arrays.asList("Животные", "Птицы", "Рыба");
         List<String> actualFood = feline.eatMeat();
-        assertNotNull(actualFood);
-        assertTrue(actualFood.containsAll(expectedFood));
-        assertTrue(expectedFood.containsAll(actualFood));
+        assertEquals(expectedFood, actualFood);
     }
+
 
     @Test
     public void testGetFamily() {
